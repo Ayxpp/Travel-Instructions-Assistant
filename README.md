@@ -56,13 +56,13 @@ streamlit run app.py
 ```
 # Outputs
 ## User Input
-![User Input](1.png)
+![User Input](userinput.png)
 ## Bus Route
-![Bus Route](bus.png)
+![Bus Route](busroute.png)
 ## Train Route
-![Train Route](train.png)
+![Train Route](trainroute.png)
 ## Car Route
-![Car Route](car.png)
+![Car Route](carroute.png)
 ## Cost Estimation
 ![Cost Estimation](costestimation.png)
 
