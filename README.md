@@ -20,7 +20,7 @@ Follow these steps to set up the project on your local machine:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/travel-instructions-assistant.git
+    git clone https://github.com/Ayxpp/travel-instructions-assistant.git
     cd travel-instructions-assistant
     ```
 
