@@ -55,5 +55,15 @@ To run the application, use the following command:
 streamlit run app.py
 ```
 # Outputs
+## User Input
+![User Input](1.png)
+## Bus Route
+![Bus Route](bus.png)
+## Train Route
+![Train Route](train.png)
+## Car Route
+![Car Route](car.png)
+## Cost Estimation
+![Cost Estimation](costestimation.png)
 
 
