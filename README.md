@@ -56,14 +56,14 @@ streamlit run app.py
 ```
 # Outputs
 ## User Input
-![User Input](userinput.png)
+![User Input](https://github.com/Ayxpp/Travel-Instructions-Assistant/blob/main/img/userinput.png)
 ## Bus Route
-![Bus Route](busroute.png)
+![Bus Route](https://github.com/Ayxpp/Travel-Instructions-Assistant/blob/main/img/busroute.png)
 ## Train Route
-![Train Route](trainroute.png)
+![Train Route](https://github.com/Ayxpp/Travel-Instructions-Assistant/blob/main/img/trainroute.png)
 ## Car Route
-![Car Route](carroute.png)
+![Car Route](https://github.com/Ayxpp/Travel-Instructions-Assistant/blob/main/img/carroute.png)
 ## Cost Estimation
-![Cost Estimation](costestimation.png)
+![Cost Estimation](https://github.com/Ayxpp/Travel-Instructions-Assistant/blob/main/img/costestimation.png)
 
 
