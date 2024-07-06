@@ -1,5 +1,6 @@
 import streamlit as st
 from openai import OpenAI
+import time
 
 # Initialize OpenAI client with your API key from Streamlit secrets
 client = OpenAI(api_key=st.secrets['OPENAI_API_KEY'])
@@ -92,30 +93,35 @@ def main():
             system_prompt = generate_travel_instructions(
                 current_location, destination)
 
-            # Send request to OpenAI API for response
-            try:
-                response = client.chat.completions.create(
-                    model="gpt-4o",
-                    messages=[{
-                        "role": "system",
-                        "content": system_prompt
-                    }, {
-                        "role":
-                        "user",
-                        "content":
-                        f"My current location is {current_location} and I want to travel to {destination}."
-                    }])
+            # Display spinner while generating instructions
+            with st.spinner('Wait for it...'):
+                time.sleep(5)  # Simulate a delay for demonstration purposes
 
-                # Extract and display response from OpenAI API
-                travel_instructions = response.choices[0].message.content
+                # Send request to OpenAI API for response
+                try:
+                    response = client.chat.completions.create(
+                        model="gpt-4o",
+                        messages=[{
+                            "role": "system",
+                            "content": system_prompt
+                        }, {
+                            "role":
+                            "user",
+                            "content":
+                            f"My current location is {current_location} and I want to travel to {destination}."
+                        }])
 
-                st.markdown("## 📋 Travel Instructions")
-                st.markdown(
-                    f"<div class='output-box'>{travel_instructions}</div>",
-                    unsafe_allow_html=True)
+                    # Extract and display response from OpenAI API
+                    travel_instructions = response.choices[0].message.content
 
-            except Exception as e:
-                st.error(f"An error occurred: {e}")
+                    st.markdown("## 📋 Travel Instructions")
+                    st.markdown(
+                        f"<div class='output-box'>{travel_instructions}</div>",
+                        unsafe_allow_html=True)
+
+                except Exception as e:
+                    st.error(f"An error occurred: {e}")
+                st.success('Done!')
 
 if __name__ == "__main__":
     main()
